@@ -1,0 +1,39 @@
+.job-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-container h2 {
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.job-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.job-container li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.job-container button {
+  padding: 6px 12px;
+  background: #ff6600;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.job-container button:hover {
+  background: #e65c00;
+}

@@ -1,0 +1,23 @@
+.badge {
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.badge.pending {
+  background-color: #ff9800; /* Orange */
+}
+
+.badge.progress {
+  background-color: #2196f3; /* Blue */
+}
+
+.badge.resolved {
+  background-color: #4caf50; /* Green */
+}
+
+.badge.default {
+  background-color: #9e9e9e; /* Grey */
+}

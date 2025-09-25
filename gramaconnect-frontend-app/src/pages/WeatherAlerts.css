@@ -1,0 +1,53 @@
+.weather-container {
+  padding: 25px;
+  background: linear-gradient(135deg, #ffffff, #fff8f2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.weather-container h2 {
+  color: #ff6600;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.alert-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fdf2e9;
+  padding: 15px;
+  margin: 12px 0;
+  border-radius: 8px;
+  border-left: 6px solid #ff6600;
+  transition: transform 0.2s ease-in-out;
+}
+
+.alert-card:hover {
+  transform: scale(1.02);
+  background: #fff3e0;
+}
+
+.alert-icon {
+  font-size: 1.5rem;
+}
+
+.alert-text {
+  flex: 1;
+}
+
+.severity {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.green { background: #d4edda; color: #155724; }
+.yellow { background: #fff3cd; color: #856404; }
+.orange { background: #ffe5b4; color: #a94442; }
+.red { background: #f8d7da; color: #721c24; }

@@ -1,0 +1,73 @@
+.waste-container {
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.waste-container h2 {
+  color: #ff6600;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form-group select,
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  padding: 12px 20px;
+  background: #ff6600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #e65c00;
+}
+
+.status {
+  margin-top: 15px;
+  color: green;
+  font-weight: bold;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-list li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.collect-btn {
+  background: green;
+  margin-top: 8px;
+}
+.collect-btn:hover {
+  background: darkgreen;
+}

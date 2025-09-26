@@ -1,0 +1,11 @@
+/* src/pages/AdminComplaints.css */
+.admin-wrap{max-width:1200px;margin:20px auto;padding:12px;}
+.admin-grid{display:flex;gap:16px;}
+.list-col{width:36%;overflow:auto;max-height:600px;}
+.map-col{flex:1;}
+.admin-card{background:#fff;padding:12px;border-radius:10px;margin-bottom:10px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.04);}
+.admin-card h3{color:#ff6600;}
+.mini-actions button{margin-right:8px;padding:6px 8px;border-radius:8px;border:none;background:#ff6600;color:#fff;cursor:pointer;}
+.detail-panel{background:#fff;padding:12px;border-radius:10px;margin-top:12px;}
+.resolution-upload input{margin-top:8px;}
+.timeline-admin{margin-top:10px;border-left:3px dashed #eee;padding-left:8px;}

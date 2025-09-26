@@ -18,7 +18,7 @@ const WasteManagement = () => {
 
   const schedulePickup = () => {
     if (!wasteType || !date || !timeSlot) {
-      setStatus("⚠ Please fill all required fields!");
+      setStatus(" Please fill all required fields!");
       return;
     }
 
@@ -35,7 +35,7 @@ const WasteManagement = () => {
     };
 
     setPickupHistory([...pickupHistory, newRequest]);
-    setStatus(`✅ Pickup Scheduled! Assigned to ${assignedWorker}`);
+    setStatus(`Pickup Scheduled! Assigned to ${assignedWorker}`);
     setWasteType("");
     setDate("");
     setTimeSlot("");
@@ -44,7 +44,7 @@ const WasteManagement = () => {
 
   const markCollected = (id) => {
     const updatedHistory = pickupHistory.map((req) =>
-      req.id === id ? { ...req, progress: "Collected ✅" } : req
+      req.id === id ? { ...req, progress: "Collected " } : req
     );
     setPickupHistory(updatedHistory);
   };
@@ -93,7 +93,7 @@ const WasteManagement = () => {
       {status && <p className="status">{status}</p>}
 
       {/* Pickup History */}
-      <h3>📜 Pickup History</h3>
+      <h3>Pickup History</h3>
       {pickupHistory.length === 0 ? (
         <p>No requests yet.</p>
       ) : (
@@ -104,9 +104,9 @@ const WasteManagement = () => {
               Assigned To: {req.worker} <br />
               Status: {req.progress} <br />
               {req.photo !== "No photo uploaded" && (
-                <span>📸 {req.photo}</span>
+                <span> {req.photo}</span>
               )}
-              {req.progress !== "Collected ✅" && (
+              {req.progress !== "Collected " && (
                 <button
                   className="collect-btn"
                   onClick={() => markCollected(req.id)}

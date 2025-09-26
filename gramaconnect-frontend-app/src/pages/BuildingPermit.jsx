@@ -11,12 +11,12 @@ const BuildingPermit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Building permit request submitted ✅\nOfficer will review your plan.");
+    alert("Building permit request submitted \nOfficer will review your plan.");
   };
 
   return (
     <div className="building-container">
-      <h2>🏠 Building Permit Application</h2>
+      <h2> Building Permit Application</h2>
       <form onSubmit={handleSubmit}>
         <label>Owner Name:</label>
         <input type="text" name="owner" onChange={handleChange} required />

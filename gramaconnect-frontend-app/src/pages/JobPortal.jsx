@@ -10,7 +10,7 @@ const JobPortal = () => {
 
   const applyJob = (job) => {
     setApplications([...applications, job]);
-    alert(`Applied for ${job.title} ✅`);
+    alert(`Applied for ${job.title} `);
   };
 
   return (

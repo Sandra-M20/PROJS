@@ -1,0 +1,61 @@
+:root {
+  --primary: #0056a6;   /* Kerala Govt Blue */
+  --secondary: #ffffff; /* White */
+  --accent: #007bff;    /* Lighter Blue */
+  --bg-light: #f4f7fb;  /* Dashboard background */
+  --text-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+/* Card container */
+.card {
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Titles */
+h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+/* Inputs + Select */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Button */
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+}
+
+/* Small helper text */
+.small {
+  font-size: 13px;
+  color: #666;
+}

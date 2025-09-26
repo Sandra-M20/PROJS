@@ -6,7 +6,7 @@ const StatusTracker = () => {
 
   return (
     <div className="status-container">
-      <h2>📍 Track Your Request</h2>
+      <h2>Track Your Request</h2>
       <div className="tracker">
         <div className={`step ${status === "Pending" ? "active" : ""}`}>Pending</div>
         <div className={`step ${status === "In Progress" ? "active" : ""}`}>In Progress</div>

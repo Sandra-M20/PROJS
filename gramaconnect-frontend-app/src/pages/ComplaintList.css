@@ -1,0 +1,14 @@
+/* src/pages/ComplaintList.css */
+.complaint-list{max-width:900px;margin:20px auto;padding:12px;}
+.complaint-card{background:#fff;padding:14px;border-radius:10px;margin-bottom:14px;box-shadow:0 4px 14px rgba(0,0,0,0.04);}
+.card-head{display:flex;gap:12px;align-items:center;}
+.badge{padding:6px 8px;border-radius:6px;color:#fff;font-weight:700;margin-left:auto;}
+.badge.low{background:green;} .badge.medium{background:orange;} .badge.high{background:red;}
+.status{margin-left:8px;padding:6px 8px;border-radius:6px;background:#f0f0f0;color:#333;font-weight:700;}
+.muted{color:#666;font-size:13px;}
+.thumbs img{width:120px;height:80px;object-fit:cover;border-radius:6px;margin-right:6px;margin-top:8px;}
+.timeline{margin-top:10px;border-left:3px dashed #eee;padding-left:8px;}
+.timeline-item{margin-bottom:8px;}
+.t-note{font-size:13px;color:#555;}
+.t-time{font-size:12px;color:#999;}
+.feedback-box button{margin-right:8px;padding:8px 10px;border-radius:8px;border:none;background:#ff6600;color:#fff;cursor:pointer;}

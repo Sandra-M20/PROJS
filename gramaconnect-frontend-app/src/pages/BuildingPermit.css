@@ -1,36 +1,71 @@
+/* src/pages/BuildingPermit.css */
 .building-container {
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 520px;
+  margin: 50px auto;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border-top: 5px solid #007bff;
+  transition: transform 0.3s ease;
+}
+
+.building-container:hover {
+  transform: translateY(-3px);
 }
 
 .building-container h2 {
-  color: #ff6600;
-  margin-bottom: 15px;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 25px;
 }
 
-.building-container form {
+form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
-.building-container input,
-.building-container button {
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="file"] {
   padding: 10px;
   border-radius: 6px;
   border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
 }
 
-.building-container button {
-  background-color: #ff6600;
+input[type="text"]:focus,
+input[type="file"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  background-color: #007bff;
   color: white;
+  padding: 10px;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.building-container button:hover {
-  background-color: #e65c00;
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.message {
+  text-align: center;
+  margin-top: 20px;
+  color: #007bff;
+  font-weight: bold;
 }

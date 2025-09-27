@@ -1,73 +1,64 @@
-.waste-container {
-  padding: 25px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  max-width: 700px;
+.wm-wrap { max-width: 1100px; margin: 0 auto; }
+.wm-title { color: #0a57a7; margin-bottom: 14px; }
+
+.wm-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.wm-tabs button {
+  background: #e7f1ff; border: 1px solid #cfe4ff; color: #0a57a7;
+  padding: 8px 12px; border-radius: 6px; cursor: pointer;
+}
+.wm-tabs .active { background: #0a57a7; color: #fff; border-color: #0a57a7; }
+
+.wm-card {
+  background: #fff; border: 1px solid #e7eef7; border-top: 4px solid #0a57a7;
+  border-radius: 10px; padding: 18px; margin-bottom: 18px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
 }
 
-.waste-container h2 {
-  color: #ff6600;
-  margin-bottom: 15px;
-}
+.wm-form label { display:block; font-weight:600; color:#0a57a7; margin: 6px 0 4px; }
+.wm-form input, .wm-form select { width: 100%; padding: 10px; border: 1px solid #cfd8e3; border-radius: 8px; }
+.grid2 { display:grid; grid-template-columns: 1fr 1fr; gap:12px; }
+.grid3 { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px; }
+@media (max-width: 768px) { .grid2, .grid3 { grid-template-columns: 1fr; } }
 
-.form-group {
-  margin-bottom: 15px;
-}
+.leaflet-box { height: 280px; width: 100%; border: 1px solid #cfd8e3; border-radius: 10px; overflow: hidden; }
+.leaflet-box.tall { height: 420px; }
+.leaflet-container { height: 100%; width: 100%; }
+.small { font-size: 12px; color: #666; }
+.muted { color: #6b7280; }
+.ok { margin-top: 8px; color: #0a57a7; font-weight: 600; }
 
-.form-group label {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
-}
+.thumb-row { display:flex; gap:8px; margin: 6px 0 10px; flex-wrap: wrap; }
+.thumb { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border:1px solid #e1e8f1; }
 
-.form-group select,
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
+.btn { background: #0a57a7; border: 1px solid #0a57a7; color: #fff; padding: 10px 14px; border-radius: 8px; cursor: pointer; }
+.btn:hover { background: #084989; }
+.btn.primary { background:#0a57a7; }
+.btn.warn { background: #ff6b00; border-color: #ff6b00; }
 
-button {
-  padding: 12px 20px;
-  background: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  font-weight: bold;
-}
+.legend { display: flex; gap: 12px; margin-top: 8px; }
+.dot { width: 10px; height: 10px; display:inline-block; border-radius: 50%; margin-right: 6px; }
+.dot.green { background: #10b981; }
+.dot.orange { background: #fb923c; }
+.dot.red { background: #ef4444; }
 
-button:hover {
-  background: #e65c00;
-}
+.list { margin-top: 10px; }
+.list-item { display:flex; align-items:center; justify-content: space-between; padding:10px; border:1px solid #eef2f7; border-radius:8px; margin-bottom:8px; }
+.badge { padding: 5px 10px; border-radius: 20px; font-size: 12px; color:#fff; }
+.badge.pending { background:#6b7280; }
+.badge.assigned { background:#2563eb; }
+.badge.collected { background:#10b981; }
+.badge.missed { background:#ef4444; }
+.badge.cancelled { background:#f59e0b; }
 
-.status {
-  margin-top: 15px;
-  color: green;
-  font-weight: bold;
-}
+.calendar { display:grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 10px; }
+.cal-item { border:1px solid #e7eef7; border-radius:8px; padding:10px; }
+.cal-day { font-weight:700; color:#0a57a7; }
+.cal-types { color:#374151; margin-top:4px; }
 
-.history-list {
-  list-style: none;
-  padding: 0;
-}
+/* color classes for bin marker icons via CSS class injection */
+.marker-red img.leaflet-marker-icon { filter: hue-rotate(300deg) saturate(2); }
+.marker-orange img.leaflet-marker-icon { filter: hue-rotate(20deg) saturate(2); }
+.marker-green img.leaflet-marker-icon { filter: hue-rotate(100deg) saturate(1.5); }
 
-.history-list li {
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  background: #f9f9f9;
-}
-
-.collect-btn {
-  background: green;
-  margin-top: 8px;
-}
-.collect-btn:hover {
-  background: darkgreen;
-}
+.chart h4 { margin: 6px 0 10px; color: #0a57a7; }
+.export { margin-top: 12px; }

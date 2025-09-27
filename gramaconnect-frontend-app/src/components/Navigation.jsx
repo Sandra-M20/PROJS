@@ -14,7 +14,6 @@ const Navigation = () => {
         <li><Link to="/waste-management">Waste Mgmt</Link></li>
         <li><Link to="/job-portal">Job Portal</Link></li>
         <li><Link to="/weather-alerts">Weather</Link></li>
-        <li><Link to="/certificates">Certificates</Link></li>
         <li><Link to="/status-tracker">Status</Link></li>
       </ul>
     </nav>

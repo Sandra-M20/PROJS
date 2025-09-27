@@ -1,0 +1,7 @@
+.tracker-page { max-width:900px; margin:20px auto; }
+.search { display:flex; gap:8px; }
+.card { background:#fff; border-radius:8px; padding:12px; margin-top:10px; border-left:4px solid #007bff; }
+.row { display:flex; justify-content:space-between; }
+.steps { display:flex; gap:10px; margin-top:8px; }
+.step { padding:6px 10px; border-radius:20px; background:#eaeef7; color:#555; font-size:13px; }
+.step.active { background:#007bff; color:#fff; }

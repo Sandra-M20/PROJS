@@ -1,28 +1,30 @@
-// src/pages/Login.jsx
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../api";
+import "./JobPortal.css";
 
 export default function Login({ onLogin }) {
-  const [email,setEmail] = useState(""), [pass,setPass]=useState("");
-  const submit = async e => {
+  const [phone, setPhone] = useState("");
+  const [password, setPassword] = useState("");
+
+  const submit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", { email, password: pass });
-      const { token, user } = res.data;
-      localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
-      onLogin(user);
-    } catch (err) {
+      const { data } = await api.post("/auth/login", { phone, password });
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("user", JSON.stringify(data.user));
+      onLogin?.(data.user);
+    } catch (e) {
       alert("Login failed");
     }
   };
+
   return (
-    <div style={{maxWidth:420, margin:"40px auto"}}>
-      <h2>Admin Login</h2>
-      <form onSubmit={submit}>
-        <input placeholder="Email" value={email} onChange={e=>setEmail(e.target.value)} required />
-        <input placeholder="Password" type="password" value={pass} onChange={e=>setPass(e.target.value)} required />
-        <button type="submit">Login</button>
+    <div className="card auth">
+      <h2>Login</h2>
+      <form onSubmit={submit} className="form">
+        <input placeholder="Phone" value={phone} onChange={(e)=>setPhone(e.target.value)} />
+        <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+        <button className="btn primary">Login</button>
       </form>
     </div>
   );

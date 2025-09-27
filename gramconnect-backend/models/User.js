@@ -2,23 +2,27 @@
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
-  role: { type: String, enum: ["admin","officer","citizen"], default: "citizen" }
-}, { timestamps: true });
+const userSchema = new mongoose.Schema(
+  {
+    name: { type: String, required: true },
+    phone: { type: String, required: true, unique: true },
+    email: { type: String },
+    password: { type: String, required: true },
+    role: { type: String, enum: ["seeker", "employer", "officer"], default: "seeker" },
+    ward: { type: String },            // for local targeting
+    skills: [{ type: String }],        // used for matching
+  },
+  { timestamps: true }
+);
 
-// hash password
-userSchema.pre("save", async function(next){
+userSchema.pre("save", async function (next) {
   if (!this.isModified("password")) return next();
-  const salt = await bcrypt.genSalt(10);
-  this.password = await bcrypt.hash(this.password, salt);
+  this.password = await bcrypt.hash(this.password, 10);
   next();
 });
 
-userSchema.methods.matchPassword = async function(entered) {
-  return require("bcryptjs").compare(entered, this.password);
-}
+userSchema.methods.comparePassword = function (plain) {
+  return bcrypt.compare(plain, this.password);
+};
 
 module.exports = mongoose.model("User", userSchema);

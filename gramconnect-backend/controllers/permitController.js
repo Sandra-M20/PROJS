@@ -23,10 +23,10 @@ exports.uploadPermit = [
       const newPermit = new Permit({ owner, plotLocation, planFile });
       await newPermit.save();
 
-      res.json({ message: "✅ Permit application submitted successfully!" });
+      res.json({ message: "Permit application submitted successfully!" });
     } catch (err) {
       console.error(err);
-      res.status(500).json({ message: "❌ Server error, try again later." });
+      res.status(500).json({ message: "Server error, try again later." });
     }
   },
 ];

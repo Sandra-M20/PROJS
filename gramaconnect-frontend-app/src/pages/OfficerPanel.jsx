@@ -10,7 +10,7 @@ export default function OfficerPanel(){
     const res = await axios.get("http://localhost:5000/api/permits/all", {
       headers: { Authorization: `Bearer ${token}` }
     });
-    setData(res.data);
+    setAData(res.data);
   };
 
   const setStatus = async (id, status, note="") => {

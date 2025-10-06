@@ -14,7 +14,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-geosearch/dist/geosearch.css";
 import "./ComplaintForm.css";
 
-// ✅ Fix leaflet marker icons
+// Fix leaflet marker icons
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconUrl:
@@ -23,7 +23,7 @@ L.Icon.Default.mergeOptions({
     "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
 });
 
-// 📍 Component for picking location
+//  Component for picking location
 function LocationPicker({ setLocation }) {
   const [pos, setPos] = useState(null);
 
@@ -37,7 +37,7 @@ function LocationPicker({ setLocation }) {
   return pos ? <Marker position={pos} /> : null;
 }
 
-// 🔍 Search bar for location
+//  Search bar for location
 function SearchField({ setLocation }) {
   const map = useMap();
 
@@ -67,7 +67,7 @@ function SearchField({ setLocation }) {
   return null;
 }
 
-// 🧭 Fix map resize
+//  Fix map resize
 function ResizeHandler() {
   const map = useMap();
   useEffect(() => {
@@ -105,7 +105,7 @@ export default function ComplaintForm() {
       await axios.post("http://localhost:5000/api/complaints", fd, {
         headers: { "Content-Type": "multipart/form-data" },
       });
-      alert("✅ Complaint submitted successfully!");
+      alert(" Complaint submitted successfully!");
       setTitle("");
       setCategory("");
       setDesc("");
@@ -114,7 +114,7 @@ export default function ComplaintForm() {
       setLocation(null);
     } catch (err) {
       console.error(err);
-      alert("❌ Submission failed. Please try again.");
+      alert(" Submission failed. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -122,7 +122,7 @@ export default function ComplaintForm() {
 
   return (
     <div className="complaint-form-card">
-      <h2>📝 Public Grievance Form</h2>
+      <h2> Public Grievance Form</h2>
       <form onSubmit={submit}>
         {/* Title */}
         <label>Complaint Title *</label>
@@ -175,7 +175,7 @@ export default function ComplaintForm() {
           </MapContainer>
         </div>
 
-        {/* 🌍 Show selected coordinates */}
+        {/*  Show selected coordinates */}
         {location && (
           <div className="coords-box">
             <p><b>📍 Selected Coordinates:</b></p>

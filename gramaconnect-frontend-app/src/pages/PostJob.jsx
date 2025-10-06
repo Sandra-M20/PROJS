@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import api from "../api";
+import api from "../utils/api";
 import "./JobPortal.css";
 
 export default function PostJob() {
@@ -19,7 +19,7 @@ export default function PostJob() {
     if (logo) fd.append("logo", logo);
     try {
       await api.post("/jobs", fd, { headers: { "Content-Type": "multipart/form-data" } });
-      alert("Job posted ✅");
+      alert("Job posted ");
     } catch {
       alert("Failed to post");
     }

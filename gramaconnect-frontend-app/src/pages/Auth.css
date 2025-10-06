@@ -1,0 +1,34 @@
+.auth-card {
+  background: white;
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.auth-card h2 {
+  color: #0b5ed7;
+  margin-bottom: 16px;
+}
+
+.auth-card input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.auth-card button {
+  width: 100%;
+  background: #0b5ed7;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.auth-card button:hover {
+  background: #0948aa;
+}

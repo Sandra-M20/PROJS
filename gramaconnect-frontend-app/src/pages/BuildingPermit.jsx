@@ -40,7 +40,7 @@ const BuildingPermit = () => {
       setForm({ owner: "", plotLocation: "", planFile: null });
     } catch (err) {
       console.error(err);
-      setMessage("❌ Error submitting application. Try again later.");
+      setMessage(" Error submitting application. Try again later.");
     } finally {
       setLoading(false);
     }

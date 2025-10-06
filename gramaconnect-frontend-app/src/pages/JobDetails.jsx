@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import api from "../api";
+import api from "../utils/api";
 import { useParams } from "react-router-dom";
 import "./JobPortal.css";
 
@@ -23,7 +23,7 @@ export default function JobDetails() {
     if (resume) fd.append("resume", resume);
     try {
       await api.post(`/jobs/${id}/apply`, fd, { headers: { "Content-Type": "multipart/form-data" } });
-      alert("Applied ✅");
+      alert("Applied Successfully");
     } catch {
       alert("Apply failed");
     }

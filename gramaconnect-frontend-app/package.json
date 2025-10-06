@@ -13,6 +13,7 @@
     "dayjs": "^1.11.18",
     "leaflet": "^1.9.4",
     "leaflet-geosearch": "^4.2.2",
+    "lucide-react": "^0.544.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.2.1",
